@@ -6,7 +6,7 @@ import lombok.Data;
 public class login {
 	private String name;
 	private int phone_no;
-	private String role;
+	
 	public String getName() {
 		return name;
 	}
@@ -18,11 +18,5 @@ public class login {
 	}
 	public void setPhone_no(int phone_no) {
 		this.phone_no = phone_no;
-	}
-	public String getRole() {
-		return role;
-	}
-	public void setRole(String role) {
-		this.role = role;
 	}
 }

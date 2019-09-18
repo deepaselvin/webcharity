@@ -12,31 +12,28 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.Gson;
 import com.revature.webcharityapp.projectdept2.dao.UserDAODetails;
-import com.revature.webcharityapp.projectdept2.model.RegUserDetails;
+import com.revature.webcharityapp.projectdept2.model.requestlist;
 
-public class userlist extends HttpServlet {
+public class Requestlist extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//to call dao
-			
-				List<RegUserDetails> list = null;
-				try {
-					list = 		UserDAODetails.userRequest();
-				} catch (SQLException e) {
-					// TODO Auto-generated catch block
-					System.out.println("list is not found");
-				}
 				
-				//convert list to json
-				Gson gson = new Gson();
-				String json = gson.toJson(list);
+		String json;
+		try {
+			json = LoginController.listRequest();
+			PrintWriter out = response.getWriter();
+			out.write(json);
+			out.flush();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 				
 				//write the json as response
-				PrintWriter out = response.getWriter();
-				out.write(json);
-				out.flush();
-	}
+		}
 
 }
+ 

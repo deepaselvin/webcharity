@@ -81,5 +81,32 @@ public class ValidateName {
 	   
 		
 	}
+
+	public static void AdminName(String adminName) {
+		// TODO Auto-generated method stub
+		 String regex = "^[a-zA-Z]+$";
+	        String status = null;
+	        boolean loop = true;
+	        Pattern pattern = Pattern.compile(regex);
+	        
+	        String name = adminName;
+	        do {
+	            if (status != null && !status.equals("")) {
+	                System.out.println("Enter your Request:");
+	                name = scanner.next();
+	            }
+	            Matcher matcher = pattern.matcher(name);
+	            // System.out.println("Hello"+matcher);
+	            if (!matcher.matches()) {
+	                System.out.println("Request is not specified in its correct way...");
+	                
+	            } else {
+	                loop = false;
+	            }
+	            pattern = Pattern.compile(regex);
+	        } while (loop);
+	   
+		
+	}
 	
 }

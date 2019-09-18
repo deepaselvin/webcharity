@@ -8,10 +8,11 @@
 
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <script src="js/bootstrap.min.js"></script>
-
+<script src="js/jquery-3.4.1.min.js"></script>
 
 </head>
-<body>
+<body style="text-align:center">
+<br><br><br>
 <jsp:include page="Header.jsp"></jsp:include>
 
 <h2>Register For New User</h2>
@@ -23,17 +24,53 @@ alert("Registered successfully");
 window.location.href = "login.jsp";
 }
 </script>
+
+
+
+</form>
+<form  onsubmit="register()">
+
 <label>UserName:</label>
 <input type="text" name="UserName" id="UserName"   required autofocus />
 <br/>
 <label>PhoneNo:</label>
 <input type="text" name="PhoneNo" id="PhoneNo"   required  />
+
 <br/>
 
-<input type = "button" value = "Submit" class="btn btn-success" onclick=login()>
-<button type="submit" class="btn btn-danger" value="clear">clear </button>
+<input type = "submit" value = "Submit" class="btn btn-success"  >
+<button type="reset" class="btn btn-danger" value="clear">clear </button>
 <br/>
 <a  href="login.jsp">Existing user</a>
-</form>
+ </form>
+<script>
+function register()
+{
+	//alert(' register');
+	event.preventDefault(); 	
+   
+   var name = document.getElementById("UserName").value;
+   var phone_no=document.getElementById("PhoneNo").value;
+   var formData = "UserName=" + name+ "&PhoneNo="+phone_no;
+   console.log(formData);
+
+    var url="http://localhost:8080/webcharityapp/Register?"+ formData;
+    console.log(url);
+    //alert(url);
+    var formData = {};
+    $.get(url, function(response){
+            console.log(response);
+            //alert(response);
+
+            if (response == null || response == "null") {
+                alert("Invalid Username/Password");
+            }
+                else{
+				window.location.href="login.jsp";
+                }
+
+            });
+}
+</script>
 </body>
 </html>

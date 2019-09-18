@@ -6,7 +6,6 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import com.revature.webcharityapp.projectdept2.dao.UserDAODetails;
-import com.revature.webcharityapp.projectdept2.exception.ValidatorException;
 import com.revature.webcharityapp.projectdept2.model.RegUserDetails;
 import com.revature.webcharityapp.projectdept2.util.ConncetionUtil;
 import com.revature.webcharityapp.projectdept2.validator.ValidateName;
@@ -46,7 +45,7 @@ public class Registration {
 			ValidatePhone.validateBeforeRegistration(Phnoneno);
 			System.out.println("Registered sucessfully");
 
-		} catch (ValidatorException e) {
+		} catch (InputMismatchException e) {
 			System.out.println("enter valid  phone no");
 			register();
 		}

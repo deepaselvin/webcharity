@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -6,7 +7,7 @@
 <meta charset="ISO-8859-1">
 <title>REQUEST DETAILS</title>
 <body style="text-align:center">
-<br><br><br>
+<br>
 
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <script src="js/bootstrap.min.js"></script>
@@ -18,10 +19,10 @@
 
 function loadBooks (){
 //alert('table content');        
-    var url = "http://localhost:8080/webcharityapp/userlist";
+    var url = "http://localhost:8080/webcharityapp/Requestlist";
    $.getJSON(url, function(response){
 		var books = response;
-		//alert(response);
+		//`alert(response);
 	
     document.getElementById("tbody").innerHTML = "";
     var content = "";
@@ -31,7 +32,7 @@ function loadBooks (){
         content += "<tr>";
         content += "<td>" + ++i + "</td>";
         content += "<td>" + us.name + "</td>";
-        content += "<td>" + us.phone_no + "</td>";
+        
         content += "</tr>";
     }
     console.log(content);
@@ -45,8 +46,9 @@ function loadBooks (){
 <body>
 
 	<jsp:include page="Header.jsp"></jsp:include>
-	
-	<h2>Donor List</h2>
+<br>
+	<h2>FUND NEEDED REQUEST </h2>
+<br><br>
 	<form>
 		<div class="container-fluid">
 			<div class="row">
@@ -56,9 +58,7 @@ function loadBooks (){
 						<thead>
 							<tr>
 								<th>Sno</th>
-								<th>Donor Name</th>
-								<th>phone_no</th>
-
+								<th>Request Name</th>
 							</tr>
 						</thead>
 						<tbody id="tbody">

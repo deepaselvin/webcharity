@@ -12,9 +12,11 @@ public class  Start {
 	public static void welcome() throws Exception {	
 		
 		System.out.println("****** WELCOME TO THE CHARITY  ****** \n "
-				+ "1 REGISTER  \n"
-				+ " 2 LOGIN     \n"
-				+ " 3 LOG OUT");
+				+ "1 DONOR REGISTER  \n"
+				+ " 2 DONOR LOGIN     \n"
+				+ " 3 ADMIN REGISTER   \n"
+				+ "4 ADMIN LOGIN   \n"
+				+ "5 LOG OUT");
 		int a = scanner.nextInt();
 		
 		switch(a) {
@@ -40,17 +42,18 @@ public class  Start {
 		catch(SQLException e) 
         { 
 			e.printStackTrace();
-            System.out.println("Exception in Login"); 
-        } 
-          
+            System.out.println("Exception in Login");}    
         finally
-        { 
-            System.out.println("INVALID USERNAME"); 
-        } 
+        {    System.out.println("INVALID USERNAME");        } 
 		welcome();
-		break;
+		break;}
+		case 3:{
+			
+			AdminLogin.adlogin();
+			MainMenuList.show();
+		}
 		
-}
+		
 		}
 	}
 

@@ -20,14 +20,10 @@ public class MainMenuList {
 			switch (a) {
 
 			case 1: {
-				try {
+			
 					System.out.println("REQUEST LIST");
-
-					RequestList.req();
-				} catch (Exception e) {
+					ListRequest.list();
 				
-					e.printStackTrace();
-				}
 				Start.welcome();
 			}
 				break;
@@ -46,12 +42,9 @@ public class MainMenuList {
 			case 3: {
 				System.out.println("WELCOME TO THE CHARITY FUNDS");
 				
-				System.out.println(
-						"MAIN MENU \n " + "01 : CHILDRENS EDUCTAION \n" + "02:HEALTH & NUTRITION \n" + "03:LOG OUT");
-
-				System.out.println("Enter Request Number");
-				int Reqno = scanner.nextInt();
-
+				System.out.println("Enter Request ");
+				String Req = scanner.next();
+				UserDAODetails.adminRequest(Req);
 				Fundinfo.fund();
 
 				Start.welcome();

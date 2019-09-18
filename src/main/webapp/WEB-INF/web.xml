@@ -17,16 +17,52 @@
   	<servlet-class>com.revature.webcharityapp.controller.LoginServlet</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>mainmenuservlet</servlet-name>
-  	<display-name>mainmenuservlet</display-name>
+  	<servlet-name>Register</servlet-name>
+  	<display-name>Register</display-name>
   	<description></description>
-  	<servlet-class>com.revature.webcharityapp.controller.mainmenuservlet</servlet-class>
+  	<servlet-class>com.revature.webcharityapp.controller.Register</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Login</servlet-name>
+  	<display-name>Login</display-name>
+  	<description></description>
+  	<servlet-class>com.revature.webcharityapp.controller.Login</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AdminRegister</servlet-name>
+  	<display-name>AdminRegister</display-name>
+  	<description></description>
+  	<servlet-class>com.revature.webcharityapp.controller.AdminRegister</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AdminLogin</servlet-name>
+  	<display-name>AdminLogin</display-name>
+  	<description></description>
+  	<servlet-class>com.revature.webcharityapp.controller.AdminLogin</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>userlist</servlet-name>
   	<display-name>userlist</display-name>
   	<description></description>
   	<servlet-class>com.revature.webcharityapp.controller.userlist</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Requestlist</servlet-name>
+  	<display-name>Requestlist</display-name>
+  	<description></description>
+  	<servlet-class>com.revature.webcharityapp.controller.Requestlist</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>addrequest</servlet-name>
+  	<display-name>addrequest</display-name>
+  	<description></description>
+  	<servlet-class>com.revature.webcharityapp.controller.addrequest</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>contributerequest</servlet-name>
+  	<display-name>contributerequest</display-name>
+  	<description></description>
+  	<servlet-class>com.revature.webcharityapp.controller.contributerequest</servlet-class>
   </servlet>
   <servlet-mapping>
   	<servlet-name>RegisterServlet</servlet-name>
@@ -37,11 +73,35 @@
   	<url-pattern>/LoginServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>mainmenuservlet</servlet-name>
-  	<url-pattern>/mainmenuservlet</url-pattern>
+  	<servlet-name>Register</servlet-name>
+  	<url-pattern>/Register</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Login</servlet-name>
+  	<url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AdminRegister</servlet-name>
+  	<url-pattern>/AdminRegister</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AdminLogin</servlet-name>
+  	<url-pattern>/AdminLogin</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
   	<servlet-name>userlist</servlet-name>
   	<url-pattern>/userlist</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Requestlist</servlet-name>
+  	<url-pattern>/Requestlist</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>addrequest</servlet-name>
+  	<url-pattern>/addrequest</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>contributerequest</servlet-name>
+  	<url-pattern>/contributerequest</url-pattern>
   </servlet-mapping>
 </web-app>

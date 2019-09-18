@@ -1,38 +1,19 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
 
-
-</head>
-<body>
-     
 <header>
   <!-- Fixed navbar -->
 <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-    <a class="navbar-brand" href="#">REVATURE CHARITY</a>
+    <a class="navbar-brand" href="#"><center><marquee>REVATURE CHARITY</marquee></a></center>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      
+       
+          <a class="nav-link" href="index.jsp">Home <span class="sr-only">(current)</span></a>
+        
+      
+</button>    
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
           <a class="nav-link" href="index.jsp">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="login.jsp">Login</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link" href="register.jsp">Register</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link" href="requestlist.jsp">RequestList</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link" href="mainmenu.jsp">MainMenu</a>
         </li>
       
       </ul>
@@ -45,5 +26,3 @@
     </div>
   </nav>
 </header>
-</body>
-</html>

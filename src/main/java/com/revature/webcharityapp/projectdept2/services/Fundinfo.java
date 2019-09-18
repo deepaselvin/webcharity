@@ -16,15 +16,15 @@ public class Fundinfo {
 	public static void fund() throws Exception {
 		try {
 			
-			System.out.println("Enter Request ");
-			String Request_need = scanner.next();
+			System.out.println("Enter Request no ");
+			int category_id = scanner.nextInt();
 			
 			System.out.println("FUND NEEDED");
 			int Fund_needed = scanner.nextInt();
 			balance = Fund_needed;
 			
 			
-			UserDAODetails.fundUpdate(Fund_needed, Request_need);
+			UserDAODetails.fundUpdate(Fund_needed, category_id);
 		} catch (Exception e) {
 			
 			e.printStackTrace();

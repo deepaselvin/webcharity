@@ -20,10 +20,10 @@ public class userlist extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//to call dao
-			
+				UserDAODetails UserDAO= new UserDAODetails();
 				List<RegUserDetails> list = null;
 				try {
-					list = 		UserDAODetails.userRequest();
+					list = UserDAO.userRequest();
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
 					System.out.println("list is not found");

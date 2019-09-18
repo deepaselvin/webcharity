@@ -5,6 +5,7 @@ public class Welcome {
 	public static void main(String[] args) throws Exception {
 
 		try {
+//			ListRequest.list();
 			Start.welcome();
 		} catch (Exception e) {
 		

@@ -8,8 +8,10 @@
 
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
 </head>
-<body>
+<body style="text-align:center">
+<br><br><br>
 <jsp:include page="Header.jsp"></jsp:include>
 <h2>Fund Needed Details</h2>
 <form>
@@ -20,17 +22,52 @@ alert("Admin User");
 window.location.href = "mainmenu.jsp";
 }
 </script>
+</form>
 
-<label>Enter Request ID:</label>
-<input type="text" name="Request" id="Requestid"   required autofocus />
+<form  onsubmit="register()">
+
+<label>Enter New Fund :</label>
+<input type="text" name="Fundname" id="Fundname"   required autofocus />
 <br/>
+<script>
+function register()
+{
+	//alert('ENTER INTO METHOD');
+	event.preventDefault(); 	
+   
+   var name = document.getElementById("Fundname").value;
+   var formData = "Fundname=" + name;
+   console.log(formData);
+  //alert(formData);
+    var url="http://localhost:8080/webcharityapp/addrequest?"+ formData;
+    console.log(url);
+    //alert(url);
+    var formData = {};
+    $.get(url, function(response){
+            console.log(response);
+            //alert(response);
+
+            if (response == null || response == "null") {
+                alert("Invalid fund");
+            }
+                else{
+				window.location.href="login.jsp";
+                }
+
+            });
+}
+</script>
 
 <label>Enter Fund Needed:</label>
 <input type="text" name="Fund" id="Fund"   required autofocus />
 <br/>
 
-<input type = "button" value = "Submit" class="btn btn-success" onclick= maninmenu()>
+<input type = "submit" value = "Submit" class="btn btn-success" >
 <button type="submit" value="clear">clear </button>
+<br>
+<a href="donoractivity.jsp">BACK</a> <br/><br>
+<a href="reqlistorg.jsp"> REQUEST LIST</a> <br/>
+
 </form>
 
 </body>
